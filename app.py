@@ -1,8 +1,10 @@
 import crud
+import crudvec
 
 def main():
     # Inicialize a lista de dicionários vazia para armazenar os dados
     dados = []
+    dadosvec = []
 
     while True:
         print("\nMenu Principal:")
