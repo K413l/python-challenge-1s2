@@ -8,10 +8,13 @@ def visualizar_dados(dados):
 
 def inserir_dados(dados):
     try:
-        nome = input("Digite o nome: ")
+        nome = str(input("Digite o nome: "))
         idade = int(input("Digite a idade: "))
+        cpf = input("Digite a cpf: ")
+        rg = input("Digite a rg: ")
+        sexo = input("Qual o seu sexo")
 
-        novo_registro = {"Nome": nome, "Idade": idade}
+        novo_registro = {"Nome": nome, "Idade": idade, "CPF": cpf, "RG": rg, "Sexo": sexo}
         dados.append(novo_registro)
         print("Dados inseridos com sucesso.")
     except ValueError:
@@ -24,14 +27,16 @@ def atualizar_dados(dados):
         indice = int(input("Digite o número do registro que deseja atualizar: ")) - 1
         if 0 <= indice < len(dados):
             nome = input("Digite o novo nome: ")
-            idade = int(input("Digite a nova idade: "))
+            idade = int(input("Digite a idade: "))
+            cpf = input("Digite a cpf: ")
+            rg = input("Digite a rg: ")
+            sexo = input("Qual o seu sexo")
 
             dados[indice]["Nome"] = nome
             dados[indice]["idade"] = idade
             dados[indice]["rg"] = rg
             dados[indice]["cpf"] = cpf
-            dados[indice]["Idade"] = idade
-            dados[indice]["Idade"] = idade
+            dados[indice]["Idade"] = sexo
 
             print("Dados atualizados com sucesso.")
         else:
